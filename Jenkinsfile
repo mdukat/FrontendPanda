@@ -18,7 +18,7 @@ pipeline {
         }
         stage('pull backend') {
             steps {
-                git url: 'https://github.com/mdukat/FrontendPanda.git', branch: 'main'
+		checkout scm
             }
         }
         stage('unit test') {
